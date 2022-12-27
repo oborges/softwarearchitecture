@@ -8,7 +8,7 @@ const displayAverageAge = (averageAge) => {
     .then(data => {
         averageAge = data["averageAge"];
     });
-
+        
     const averageAgeElement = document.getElementById('average-age');
     averageAgeElement.innerText = `The average age is ${averageAge}`;
 };
@@ -26,3 +26,7 @@ saveForm.addEventListener('submit', (event) => {
     // Clear the form
     saveForm.reset();
 });
+
+// Get the average age from the database or file and display it
+displayAverageAge(averageAge);
+
