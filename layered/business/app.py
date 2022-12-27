@@ -1,10 +1,12 @@
 # Business layer
 #Python - Flask
 from flask import Flask, request
+from flask_cors import CORS
 import psycopg2
 
 
 app = Flask(__name__)
+CORS(app)
 
 #def get_average_age():
   # Connect to the database
