@@ -1,0 +1,14 @@
+Patitioning type: Technical
+Number of quanta: 1
+Deployability: 1
+Elasticity: 1
+Evolutionary: 1
+Fault tolerance: 1
+Modularity: 1
+Overall cost: 5
+Performance: 2
+Reliability: 3
+Scalability: 1
+Simplicity: 5
+Testability: 2
+
