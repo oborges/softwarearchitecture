@@ -3,6 +3,7 @@
 from flask import Flask, request
 import psycopg2
 
+
 app = Flask(__name__)
 
 #def get_average_age():
@@ -23,9 +24,9 @@ app = Flask(__name__)
 #  return avg_age
 
 
-@app.route('/average', method=['GET'])
+@app.route('/average', methods=['GET'])
 def get_average_age():
-  avg_age = 10
+  avg_age = {"average": "10"}
   return avg_age
 
 #@app.route('/process', methods=['POST'])
@@ -45,3 +46,6 @@ def get_average_age():
 #  avg_age = get_average_age()
 
 #  return "User saved. Average age of all users: " + str(avg_age)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
