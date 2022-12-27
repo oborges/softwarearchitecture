@@ -29,5 +29,5 @@ fetch('https://business.wzqabp4un7u.us-south.codeengine.appdomain.cloud/averageA
 .then(data => {
      averageAge = data["averageAge"];
 });
-displayAverageAge(averageAge);
+await displayAverageAge(averageAge);
 
