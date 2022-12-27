@@ -1,3 +1,3 @@
 FROM nginx
-COPY static-html-directory /usr/share/nginx/html
+COPY static-html /usr/share/nginx/html
 EXPOSE 8080
