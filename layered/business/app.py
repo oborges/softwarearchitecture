@@ -24,9 +24,9 @@ app = Flask(__name__)
 #  return avg_age
 
 
-@app.route('/average', methods=['GET'])
+@app.route('/averageAge', methods=['GET'])
 def get_average_age():
-  avg_age = {"average": "10"}
+  avg_age = {"averageAge": "10"}
   return avg_age
 
 #@app.route('/process', methods=['POST'])

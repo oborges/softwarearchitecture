@@ -22,5 +22,11 @@ saveForm.addEventListener('submit', (event) => {
 // Get the average age from the database or file and display it
 // This is just a placeholder; replace with actual code to retrieve the average age from the database or file
 const averageAge = 30;
+fetch('https://business.wzqabp4un7u.us-south.codeengine.appdomain.cloud/averageAge')
+.then(response => response.json())
+.then(data => {
+    const averageAge = data["averageAge"];
+})
+.catch(error => console.error(error));
 displayAverageAge(averageAge);
 
