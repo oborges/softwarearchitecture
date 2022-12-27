@@ -27,6 +27,6 @@ fetch('https://business.wzqabp4un7u.us-south.codeengine.appdomain.cloud/averageA
 .then(data => {
     const averageAge = data["averageAge"];
 })
-.catch(error => console.error(error));
+.catch(error => console.error(error))
 displayAverageAge(averageAge);
 
