@@ -1,15 +1,7 @@
 // index.js
-var averageAge = 0;
-
 
 const displayAverageAge = (averageAge) => {
-
-    fetch('https://business.wzqabp4un7u.us-south.codeengine.appdomain.cloud/averageAge')
-    .then(response => response.json())
-    .then(data => {
-        averageAge = data["averageAge"];
-    });
-        
+    
     const averageAgeElement = document.getElementById('average-age');
     averageAgeElement.innerText = `The average age is ${averageAge}`;
 };
@@ -29,5 +21,13 @@ saveForm.addEventListener('submit', (event) => {
 });
 
 // Get the average age from the database or file and display it
+// This is just a placeholder; replace with actual code to retrieve the average age from the database or file
+
+var averageAge = 0;
+fetch('https://business.wzqabp4un7u.us-south.codeengine.appdomain.cloud/averageAge')
+.then(response => response.json())
+.then(data => {
+     averageAge = data["averageAge"];
+});
 displayAverageAge(averageAge);
 
