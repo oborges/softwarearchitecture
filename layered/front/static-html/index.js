@@ -1,8 +1,9 @@
 // index.js
+var averageAge = 0;
+
 
 const displayAverageAge = (averageAge) => {
 
-    var averageAge = 0;
     fetch('https://business.wzqabp4un7u.us-south.codeengine.appdomain.cloud/averageAge')
     .then(response => response.json())
     .then(data => {
