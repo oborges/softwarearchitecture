@@ -26,7 +26,7 @@ def get_average_age():
   
   # Calculate the average age of all users
   #c.execute("SELECT AVG(age) FROM users")
-  avg_age = c.fetchone()[0]
+  #avg_age = c.fetchone()[0]
   
   #Close the connection
   #conn.close()
