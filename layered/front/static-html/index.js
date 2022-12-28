@@ -13,7 +13,6 @@ saveForm.addEventListener('submit', (event) => {
     const age = document.getElementById('age-input').value;
 
     // Save the data to the database or file
-    const data = { name, age };
     fetch('https://business.wzqabp4un7u.us-south.codeengine.appdomain.cloud/addUser',
     {
         method: 'POST',
@@ -24,10 +23,8 @@ saveForm.addEventListener('submit', (event) => {
             name: name,
             age: age
         }
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-
+    });
+    
     // Clear the form
     saveForm.reset();
 });
