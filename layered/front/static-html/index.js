@@ -27,9 +27,6 @@ saveForm.addEventListener('submit', (event) => {
     })
     .then(response => response.json())
     .then(data => console.log(data))
-    .catch(error => console.error(error))
-
-    // This is just a placeholder; replace with actual code to save data to the database or file
 
     // Clear the form
     saveForm.reset();
