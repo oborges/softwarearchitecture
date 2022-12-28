@@ -14,6 +14,21 @@ saveForm.addEventListener('submit', (event) => {
 
     // Save the data to the database or file
     const data = { name, age };
+    fetch('https://business.wzqabp4un7u.us-south.codeengine.appdomain.cloud/addUser',
+    {
+        metod: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: name,
+            age: age
+        })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error))
+
     // This is just a placeholder; replace with actual code to save data to the database or file
 
     // Clear the form
