@@ -25,12 +25,12 @@ def get_average_age():
   c = conn.cursor()
   
   # Calculate the average age of all users
-  c.execute("SELECT AVG(age) FROM users")
+  c.execute("SELECT ROUND(AVG(age),2) FROM users")
   captured_average = c.fetchone()[0]
   if captured_average == None:
     captured_average = 0
 
-  avg_age = str(abs(captured_average))
+  avg_age = str(captured_average)
   
   #Close the connection
   conn.close()
