@@ -30,7 +30,7 @@ def get_average_age():
   if captured_average == None:
     captured_average = 0
 
-  avg_age = str(captured_average).zfill(2)
+  avg_age = str(abs(captured_average))
   
   #Close the connection
   conn.close()
