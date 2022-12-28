@@ -19,10 +19,10 @@ saveForm.addEventListener('submit', (event) => {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: {
+        body: new URLSearchParams({
             name: name,
             age: age
-        }
+        })
     });
     
     // Clear the form
