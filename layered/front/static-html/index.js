@@ -18,12 +18,12 @@ saveForm.addEventListener('submit', (event) => {
     {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: JSON.stringify({
+        body: {
             name: name,
             age: age
-        })
+        }
     })
     .then(response => response.json())
     .then(data => console.log(data))
