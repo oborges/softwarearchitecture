@@ -25,8 +25,8 @@ saveForm.addEventListener('submit', (event) => {
         })
     });
     
-    // Clear the form
-    saveForm.reset();
+    //Reload page
+    location.reload();
 });
 
 // Get the average age from the database or file and display it
