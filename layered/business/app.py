@@ -55,7 +55,7 @@ def process():
   #c.execute("INSERT INTO users (name, age) VALUES (%s, %s)", (name, age))
   #conn.commit()
   #conn.close()
-  return "<HTML><HEAD>H</HEAD><BODY>Deu certo " + name + " " + "age" + "</BODY></HTML>"
+  return "<HTML><HEAD>H</HEAD><BODY>Deu certo " + name + " " + age + "</BODY></HTML>"
 
 
 if __name__ == '__main__':
