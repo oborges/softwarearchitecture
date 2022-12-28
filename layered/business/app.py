@@ -13,15 +13,14 @@ CORS(app)
 @app.route('/averageAge', methods=['GET'])
 def get_average_age():
   #get environment variables, populated from configmap and secrets
-  #hostname=os.environ['db_hostname']
-  #dbname=os.environ['db_name']
-  #username=os.environ['db_username']
-  #dbport=os.environ['db_port']
-  #dbpassword=os.environ['db_password']
+  hostname=os.environ['db_hostname']
+  dbname=os.environ['db_name']
+  username=os.environ['db_username']
+  dbport=os.environ['db_port']
+  dbpassword=os.environ['db_password']
   
   # Connect to the database
-  #conn_str = "host=" + hostname + " port=" + dbport + " dbname=" + dbname + " user=" + username +  " password=" + dbpassword
-  conn_str = str(os.environ)
+  conn_str = "host=" + hostname + " port=" + dbport + " dbname=" + dbname + " user=" + username +  " password=" + dbpassword
   #conn = psycopg2.connect(conn_str)
   #c = conn.cursor()
   
