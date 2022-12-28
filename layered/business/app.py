@@ -49,13 +49,13 @@ def process():
   name = request.form['name']
   age = request.form['age']
   
-  # Save the data to the database
-  #conn = psycopg2.connect(conn_str)
-  #c = conn.cursor()
-  #c.execute("INSERT INTO users (name, age) VALUES (%s, %s)", (name, age))
-  #conn.commit()
-  #conn.close()
-  return "<HTML><HEAD>H</HEAD><BODY>Deu certo " + name + " " + age + "</BODY></HTML>"
+  #Save the data to the database
+  conn = psycopg2.connect(conn_str)
+  c = conn.cursor()
+  c.execute("INSERT INTO users (name, age) VALUES (%s, %s)", (name, age))
+  conn.commit()
+  conn.close()
+  return {"status": "ok"}
 
 
 if __name__ == '__main__':
