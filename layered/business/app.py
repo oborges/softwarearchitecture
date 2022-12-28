@@ -21,7 +21,7 @@ def get_average_age():
   
   # Connect to the database
   #conn_str = "host=" + hostname + " port=" + dbport + " dbname=" + dbname + " user=" + username +  " password=" + dbpassword
-  conn_str = "bla"
+  conn_str = str(os.environ)
   #conn = psycopg2.connect(conn_str)
   #c = conn.cursor()
   
