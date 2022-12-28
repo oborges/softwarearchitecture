@@ -45,15 +45,18 @@ def get_average_age():
 @app.route('/addUser', methods=['POST'])
 def process():
 # Get the data from the form
+
   name = request.form['name']
   age = request.form['age']
   
   # Save the data to the database
-  conn = psycopg2.connect(conn_str)
-  c = conn.cursor()
-  c.execute("INSERT INTO users (name, age) VALUES (%s, %s)", (name, age))
-  conn.commit()
-  conn.close()
+  #conn = psycopg2.connect(conn_str)
+  #c = conn.cursor()
+  #c.execute("INSERT INTO users (name, age) VALUES (%s, %s)", (name, age))
+  #conn.commit()
+  #conn.close()
+  return "<HTML><HEAD>H</HEAD><BODY>Deu certo " + name + " " + "age" + "</BODY></HTML>"
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
