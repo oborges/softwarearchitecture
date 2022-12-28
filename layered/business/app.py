@@ -3,32 +3,37 @@
 from flask import Flask, request
 from flask_cors import CORS
 import psycopg2
+import os
 
 
 app = Flask(__name__)
 CORS(app)
 
 #def get_average_age():
-  # Connect to the database
-#  conn = psycopg2.connect("host=localhost dbname=mydatabase user=postgres password=password")
-  
-#  c = conn.cursor()
 
-  # Calculate the average age of all users
-#  c.execute("SELECT AVG(age) FROM users")
-#  avg_age = c.fetchone()[0]
-
-  # Close the connection
-#  conn.close()
-
-#  avg_age = 10
-
-#  return avg_age
 
 
 @app.route('/averageAge', methods=['GET'])
 def get_average_age():
-  avg_age = {"averageAge": "10"}
+  #get environment variables, populated from configmap and secrets
+  hostname=os.environ['db_hostname']
+  dbname=os.environ['db_name']
+  username=os.environ['db_username']
+  dbport=os.environ['db_port']
+  dbpassword=os.environ['db_password']
+  
+  # Connect to the database
+  conn_str = "host=" + hostname + " port=" + dbport + " dbname=" + dbname + " user=" + username +  " password=" + dbpassword
+  conn = psycopg2.connect(conn_str)
+  c = conn.cursor()
+  
+  # Calculate the average age of all users
+  c.execute("SELECT AVG(age) FROM users")
+  avg_age = c.fetchone()[0]
+  
+  #Close the connection
+  conn.close()
+  avg_age = {"averageAge": avg_age}
   return avg_age
 
 #@app.route('/process', methods=['POST'])
