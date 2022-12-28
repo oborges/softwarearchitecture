@@ -16,7 +16,7 @@ saveForm.addEventListener('submit', (event) => {
     const data = { name, age };
     fetch('https://business.wzqabp4un7u.us-south.codeengine.appdomain.cloud/addUser',
     {
-        metod: 'POST',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
